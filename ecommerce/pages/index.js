@@ -12,7 +12,7 @@ const Home = ({ products, bannerData }) => (
         <p>Speakers of many variations</p>
       </div>
       <div className='products-container'>
-        {products?.map((product) => <Product key={product._id} product={product}/>)}
+        {products?.map((product) => <Product key={product._id} product={product} />)}
       </div>
       <FooterBanner footerBanner={banner && bannerData[0]}/>
     </div>
@@ -29,6 +29,6 @@ export const getServerSideProps = async () => {
   return {
     props: { products, bannerData }
   }
-}
+};
 
-export default Home
+export default Home;
